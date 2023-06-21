@@ -1,7 +1,14 @@
 PROG= h8boot1
-SRCS= main.c
+OBJS= main.o
 
 CFLAGS+= -Wall -I../emb -g
 LDADD+= -L../emb -lemb -g
 
-.include <bsd.prog.mk>
+$(PROG): $(OBJS)
+	$(CC) -o $(PROG) $(OBJS) $(LDADD)
+
+clean:
+	rm -f $(PROG) $(OBJS)
+
+.c.o:
+	$(CC) $(CFLAGS) -c $<

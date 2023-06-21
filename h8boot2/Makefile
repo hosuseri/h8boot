@@ -1,7 +1,14 @@
 PROG= h8boot2
-SRCS= main.c flash.c
+OBJS= main.o flash.o
 
 CFLAGS+= -Wall -I../emb -O0 -g
 LDADD+= -L../emb -lemb -g
 
-.include <bsd.prog.mk>
+$(PROG): $(OBJS)
+	$(CC) -o $(PROG) $(OBJS) $(LDADD)
+
+clean:
+	rm -f $(PROG) $(OBJS)
+
+.c.o:
+	$(CC) $(CFLAGS) -c $<

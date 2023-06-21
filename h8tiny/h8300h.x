@@ -8,6 +8,9 @@ MEMORY
 }
 SECTIONS
 {
+.vectors :
+	{
+	} > ram
 .text :
 	{
 	  *(.rodata)
