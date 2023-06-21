@@ -1,4 +1,7 @@
 # h8boot
+## WHAT'S THIS?
+This flashes an H8 3694 (Renesas Electronics) @20MHz board connected by a serial line to a GNU/Linux machine.
+
 ## PREPARING
 Install the binutils-h8300-hms and gcc-h8300-hms packages.
 
@@ -10,7 +13,7 @@ Install the binutils-h8300-hms and gcc-h8300-hms packages.
 5. Place h8boot1, h8boot2, and h8boot in a directory in your PATH.
 
 ## USAGE
-Flash the board by calling the h8boot shell script with the Motorola SREC file as an argument:
+First set the board in boot mode.  Next, flash the board by calling the h8boot shell script with the Motorola SREC file as an argument:
 ```
 h8boot Monitor.mot
 ```
