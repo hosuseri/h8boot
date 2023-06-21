@@ -1,6 +1,6 @@
 # h8boot
 ## WHAT'S THIS?
-This flashes an H8 3694 (Renesas Electronics) @20MHz board connected by a serial line to a GNU/Linux machine.
+This flashes an H8/3694F (Renesas) @20MHz board connected by a serial line to a GNU/Linux machine.
 
 ## PREPARING
 Install the binutils-h8300-hms and gcc-h8300-hms packages.
@@ -17,3 +17,5 @@ First set the board in boot mode.  Next, flash the board by calling the h8boot s
 ```
 h8boot Monitor.mot
 ```
+
+These are without warranty without exception.
