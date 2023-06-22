@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	    strncpy(dev, optarg, sizeof(dev)-1);
 	    break;
 	default:
-	    fprintf(stderr, "usage: boot1 [-l <device>]\n");
+	    fprintf(stderr, "usage: boot2 [-l <device>]\n");
 	    exit(2);
 	}
     argc -= optind;
