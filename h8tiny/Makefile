@@ -1,8 +1,8 @@
 SCRIPT=h8boot
 CC=h8300-hms-gcc
 OBJCOPY=h8300-hms-objcopy
-CFLAGS=-Wall -mh -Os -c
-LDFLAGS=-Wl,-Map,boot3694.map -mh -T h8300h.x -nostartfiles -nostdlib
+CFLAGS=-Wall -mh -mn -Os -c
+LDFLAGS=-Wl,-Map,boot3694.map -mh -mn -T h8300h.x -nostartfiles -nostdlib
 
 all: h8boot
 

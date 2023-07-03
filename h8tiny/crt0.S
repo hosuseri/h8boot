@@ -1,4 +1,4 @@
-	.h8300h
+	.h8300hn
 	.text
 	.global _start
 _start:

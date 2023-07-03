@@ -10,10 +10,9 @@ char *srec_read_line(char *s, size_t n, FILE *fp)
 {
     register char *p;
 
-    if (fgets(s, (int)n, fp) == NULL) {
-	fprintf(stderr, "%s(%d): EOF detected.\n", fname, line);
+    if (fgets(s, (int)n, fp) == NULL)
 	return NULL;
-    }
+
     for (p = s + strlen(s) - 1; p > s; *p-- = '\0')
 	if (*p != '\r' && *p != '\n')
 	    break;
@@ -28,7 +27,7 @@ int srec_parse(char *s, u_char *d, size_t n)
     u_long u;
 
     if (n < sizeof(unsigned long)) {
-	fprintf(stderr, "buffer size must be at least %d bytes.\n",
+	fprintf(stderr, "buffer size must be at least %ld bytes.\n",
 		sizeof(unsigned long));
 	return 0;
     }
@@ -54,7 +53,7 @@ int srec_parse(char *s, u_char *d, size_t n)
 	break;
 
     case '9':
-	return -1;
+	return 0;
 
     default:
 	fprintf(stderr, "%s(%d): unsupported format. (%c)\n",

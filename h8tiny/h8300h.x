@@ -1,10 +1,10 @@
 OUTPUT_FORMAT("coff-h8300")
-OUTPUT_ARCH(h8300h)
+OUTPUT_ARCH(h8300hn)
 ENTRY("_start")
 MEMORY
 {
-	ram     : o = 0xf780, l = 0x76f
-	stack   : o = 0xfeec, l = 0x4
+	ram     : o = 0xf780, l = 0x780
+	stack   : o = 0xff80, l = 0x0
 }
 SECTIONS
 {
